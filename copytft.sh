@@ -1,6 +1,7 @@
 #!/bin/bash
 #########################################################
-#  Nextion TFT Support for Nextion screen Git Command   #
+#  Nextion TFT Support for Nextion screen copy correct  #
+#  file for user screen after Git Command               #
 #                                                       #
 #                   (c)2019 by KF6S                     #
 #                                                       #
