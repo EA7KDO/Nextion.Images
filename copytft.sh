@@ -11,7 +11,7 @@
 #########################################################
 # Set Nextion screen model
 #model=$(cat /var/log/syslog | grep -m 1 'display model' | awk '{print substr($9,1,10)}')
-model-$1
+model=$1
 echo $model
 tft='.tft' gz='.gz'
 #Check to make sure that NO TFT file exists at the destination
