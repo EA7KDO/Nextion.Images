@@ -1,22 +1,18 @@
 #!/bin/bash
 #########################################################
 #  Nextion TFT Support for Nextion screen copy correct  #
-#  file for user screen after Git Command               #
-#                                                       #
-#                   (c)2019 by KF6S                     #
-#                                                       #
-#                                                       #
-#                        V0.10                          #
-#                                                       #
+#  file for user screen after Git Command. 03-19-2019   #
 #########################################################
-# Set Nextion screen model
-#model=$(cat /var/log/syslog | grep -m 1 'display model' | awk '{print substr($9,1,10)}')
+# Use screen model from command $1
 model=$1
 echo $model
 tft='.tft' gz='.gz'
+#Put Pi-Star file system in RW mode
+rpi-rw
 #Check to make sure that NO TFT file exists at the destination
 rm /usr/local/etc/$model$tft
 cp /tmp/Nextion.Images/$model$tft /usr/local/etc/$model$tft > msg
+rpi-ro
 echo "Ready to flash screen..."
 
 
