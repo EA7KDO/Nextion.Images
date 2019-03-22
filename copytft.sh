@@ -1,7 +1,8 @@
 #!/bin/bash
 #########################################################
 #  Nextion TFT Support for Nextion screen copy correct  #
-#  file for user screen after Git Command. 03-19-2019   #
+#  file for user screen after Git Command.              #
+#  KF6S                                     03-19-2019  #
 #########################################################
 # Use screen model from command $1
 model=$1
