@@ -1,6 +1,6 @@
 #!/bin/bash
 #########################################################
-# Get Modem Hat from Pi-Star                            #
+# Get Modem Hat from Pi-Star web server                 #
 # KF6S                                      03-22-2019  #
 #########################################################
 # Use Pi-Star password from command $1
