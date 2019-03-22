@@ -1,1 +1,0 @@
-sudo wget -q -O- --user pi-star --password raspberry 127.0.0.1/admin/configure.php | grep -A 50 'What kind of radio or modem hardware do you have?' | grep '<option selected="selected" value="'| awk '{print substr($3,8,match($3,">")-9)}'
