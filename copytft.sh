@@ -6,7 +6,6 @@
 #########################################################
 # Use screen model from command $1
 model=$1
-echo $model
 tft='.tft' gz='.gz'
 #Put Pi-Star file system in RW mode
 rpi-rw
