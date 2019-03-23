@@ -12,9 +12,4 @@ tft='.tft' gz='.gz'
 rpi-rw
 #Check to make sure that NO TFT file exists at the destination
 rm /usr/local/etc/$model$tft
-cp /tmp/Nextion.Images/$model$tft /usr/local/etc/$model$tft > msg
-rpi-ro
-echo "Ready to flash screen..."
-
-
-
+cp /tmp/Nextion.Images/$model$tft /usr/local/etc/$model$tft
