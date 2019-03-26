@@ -1,5 +1,4 @@
 #!/bin/bash
-#PATH=~/home/pi-star:$PATH
 #########################################################
 #  Change RXOffset in mmdvmhost                         #
 #                                                       #
