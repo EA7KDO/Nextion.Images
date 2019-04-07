@@ -1,10 +1,10 @@
-#########################################################
-# Get temp from Pi-Star web server KF6S 04-01-2019 #
-#########################################################
-#Read Temp form Pi-Star web server
-C=`wget -q -O- --user pi-star --password raspberry 127.0.0.1/admin/ | grep -A 1 '&deg;C' | awk '{print substr($3,7,5)}' | sed 's/&//' | sed 's/d//'`
-F=`wget -q -O- --user pi-star --password raspberry 127.0.0.1/admin/ | grep -A 1 '&deg;C' | awk '{print substr($5,1,5)}' | sed 's/&//' | sed 's/d//'`
-echo "$F""  ""$C"
+#!/bin/bash
+tempc=$(</sys/class/thermal/thermal_zone0/temp)
+tc=$(echo "scale=1;$tempc/1000" | bc)
+# formula tf=(9/5)*Tc+32
+tf=$(echo "scale=1;((9/5) * $tc) + 32" | bc)
+echo "$tf  $tc"
+
 
 
 
