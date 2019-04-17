@@ -21,4 +21,4 @@ IF=$1
         T2=`cat /sys/class/net/$1/statistics/tx_packets`
         TXPPS=`expr $T2 - $T1`
         RXPPS=`expr $R2 - $R1`
-        echo "$TXPPS:$RXPPS"
+        echo "$TXPPS $RXPPS"
