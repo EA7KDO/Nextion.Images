@@ -1,24 +1,22 @@
 #!/bin/bash
 
-INTERVAL="1"  # update interval in seconds
+INTERVAL=".1"  # update interval in seconds
 
 if [ -z "$1" ]; then
-        echo
-        echo usage: $0 [network-interface]
-        echo
-        echo e.g. $0 eth0
-        echo
-        echo shows packets-per-second
         exit
 fi
 
-IF=$1
+if [ -z "$2" ]; then
+        $2=0
+fi
 
-        R1=`cat /sys/class/net/$1/statistics/rx_packets`
-        T1=`cat /sys/class/net/$1/statistics/tx_packets`
-        sleep $INTERVAL
-        R2=`cat /sys/class/net/$1/statistics/rx_packets`
-        T2=`cat /sys/class/net/$1/statistics/tx_packets`
-        TXPPS=`expr $T2 - $T1`
-        RXPPS=`expr $R2 - $R1`
-        echo "$TXPPS $RXPPS"
+
+R1=`cat /sys/class/net/$1/statistics/rx_packets`
+T1=`cat /sys/class/net/$1/statistics/tx_packets`
+sleep $INTERVAL
+R2=`cat /sys/class/net/$1/statistics/rx_packets`
+T2=`cat /sys/class/net/$1/statistics/tx_packets`
+RXPPS=`echo "($R2 - $R1) * 10 * $2" | bc`
+TXPPS=`echo "($T2 - $T1) * 10 * $2" | bc`
+printf '%-15s' $TXPPS $RXPPS;
+
