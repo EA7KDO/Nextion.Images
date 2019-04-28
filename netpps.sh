@@ -1,4 +1,9 @@
 #!/bin/bash
+##################################################
+# Nextion support for Scope screen NET function  #
+# Calculate Network TX and RX Packets per second #
+# KF6S								04-10-2019   #
+##################################################
 
 INTERVAL=".1"  # update interval in seconds
 
@@ -9,7 +14,6 @@ fi
 if [ -z "$2" ]; then
         $2=0
 fi
-
 
 R1=`cat /sys/class/net/$1/statistics/rx_packets`
 T1=`cat /sys/class/net/$1/statistics/tx_packets`
