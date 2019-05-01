@@ -4,8 +4,6 @@
 #  file for user screen after Git Command.              #
 #  KF6S                                     03-19-2019  #
 #########################################################
-set -o errexit
-set -o pipefail
 # Use screen model from command $1
 if [ -z "$1" ]; then
         exit
