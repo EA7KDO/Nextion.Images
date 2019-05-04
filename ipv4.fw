@@ -1,0 +1,2 @@
+iptables -A OUTPUT -p tcp --dport 5040 -j ACCEPT
+
