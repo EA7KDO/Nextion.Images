@@ -3,7 +3,7 @@
 #  Nextion Support for Nextion screen. Used to dump     #
 #  current TG and change to TG4000                      #
 #                                                       #
-#  KF6S                                     05-01-2019  #
+#  K5MRE & KF6S                             05-01-2019  #
 #########################################################
 # Use passed TS if present or default to TS2 (zero based code=1)
 if [ -z "$1" ]; then
