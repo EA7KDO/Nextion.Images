@@ -1,7 +1,7 @@
 #!/bin/bash
 #########################################################
 #  Nextion Support for Nextion screen. Used to copy     #
-#  files from Nextion.Images to there proper location   #
+#  files from Nextion.Images to their proper location   #
 #                                                       #
 #  KF6S                                     05-01-2019  #
 #########################################################
