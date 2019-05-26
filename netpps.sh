@@ -2,7 +2,7 @@
 ##################################################
 # Nextion support for Scope screen NET function  #
 # Calculate Network TX and RX Packets per second #
-# KF6S								04-10-2019   #
+# KF6S				    04-10-2019   #
 ##################################################
 
 INTERVAL=".1"  # update interval in seconds
