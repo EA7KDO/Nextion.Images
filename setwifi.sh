@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ##############################################################
 # Support for Nextion Screen to create basic wpa_supplicant  #
 # file in Nextion_Support directory.                         #
@@ -25,9 +24,17 @@ fi
 ##echo $psk
 
 sudo cat >/usr/local/etc/Nextion_Support/wpa_supplicant.conf <<EOL
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+ap_scan=1
+fast_reauth=1
+country=US
+
 network={
-ssid="${ssid}"
-psk="${psk}"
-priority=1
+    ssid="${ssid}"
+    psk="${psk}"
+    key_mgmt=WPA-PSK
+    id_str="0"
+    priority=100
 }
 EOL
