@@ -22,6 +22,6 @@ else
         then
         echo "Second attempt to copy Supplicant OK!
         else
-        echo "Second attempt to copy Supplicant failed."
+        echo "Second attempt to copy Supplicant failed!"
         fi              
 fi
