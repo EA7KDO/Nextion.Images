@@ -7,6 +7,7 @@
 #########################################################
 
 sudo mount -o remount,rw /
+sleep 1s
 sudo cp /usr/local/etc/Nextion_Support/wpa_supplicant.conf /boot/wpa_supplicant.conf
 status=$?
 
