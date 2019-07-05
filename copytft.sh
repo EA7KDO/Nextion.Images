@@ -13,6 +13,7 @@ model=$1
 tft='.tft' gz='.gz'
 #Put Pi-Star file system in RW mode
 sudo mount -o remount,rw /
+sleep 1s
 #Check to make sure that NO TFT file exists at the destination
 rm /usr/local/etc/$model$tft
 cp /tmp/Nextion.Images/$model$tft /usr/local/etc/$model$tft;
