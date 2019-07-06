@@ -7,7 +7,7 @@
 # If $1 does not exist then will return hostname for AP mode #
 # If $2 does not exist then will return default raspberry    #
 #                                                            #
-# KF6S                                            06-04-2019 #
+# KF6S                                            07-04-2019 #
 ##############################################################
 
 if [ -z "$1" ]; then
