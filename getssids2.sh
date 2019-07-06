@@ -20,4 +20,4 @@ do
   index=$((index+1))
 done < "$input"
 cat /usr/local/etc/Nextion_Support/essid2.txt | tr -d '\n' > /usr/local/etc/Nextion_Support/essid3.txt
-cat /usr/local/etc/Nextion_Support/essid3.txt | awk '{ gsub ( "\"", "", $0); print substr( $0, 81, 160 ) }'
+cat /usr/local/etc/Nextion_Support/essid3.txt | awk '{ gsub ( "\"", "", $0); print substr( $0, 80, 160 ) }'
