@@ -2,7 +2,7 @@
 ####################################################################
 # Change Master password in  /etc/mmdvmhost,                       #
 # find old value and substitute with new value from Profie wcreen  #
-# that as passed in $1.                                            #
+# that was passed in $1.                                            #
 #                                                                  #
 # KF6S                                                 05-20-2019  #
 ####################################################################
