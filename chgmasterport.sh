@@ -1,8 +1,8 @@
 #!/bin/bash
 ############################################################
 # Change Master Port in /etc/mmdvmhost, find old value and #
-# substitute with new value from Profie 2 screen passed    #
-# in $1.                                                   #
+# substitute with new value from Profie screen passed  in  #
+# $1.                                                      #
 #                                                          #
 #  KF6S                                        05-20-2019  #
 ############################################################
