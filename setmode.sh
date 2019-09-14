@@ -29,7 +29,7 @@ if [ -z "$1" ]; then
         fi
 
         if [ "$1" = 5 ]; then sudo sed -i '/\[NXDN\]/!b;n;cEnable='"$2"'' /etc/mmdvmhost
-                              sudo sed -i '/\[NXDN Network\]/!b;n;n;n;n;n;n;cEnable='"$2"'' /etc/mmdvmhost
+                              sudo sed -i '/\[NXDN Network\]/!b;n;cEnable='"$2"'' /etc/mmdvmhost
         fi
 
         if [ "$1" = 6 ]; then sudo sed -i '/\[POCSAG\]/!b;n;cEnable='"$2"'' /etc/mmdvmhost
