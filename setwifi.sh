@@ -26,7 +26,7 @@ fi
 sudo mount -o remount,rw /
 sleep 1s
 
-sudo cat >/usr/local/etc/Nextion_Support/wpa_supplicant.conf <<-EOL
+sudo cat >/usr/local/etc/Nextion_Support/wpa_supplicant.conf <<EOL
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 ap_scan=1
@@ -40,7 +40,7 @@ network={
         id_str="0"
         priority=100
         }
-        EOL
+EOL
 
 status=$?
 
@@ -48,29 +48,30 @@ if test $status -eq 0
 then
         echo "Supplicant file was created! "
 else
-        sudo mount -o remount,rw /
-        sleep 1s
-        sudo cat >/usr/local/etc/Nextion_Support/wpa_supplicant.conf <<-EOL
-        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-        update_config=1
-        ap_scan=1
-        fast_reauth=1
-        country=US
+sudo mount -o remount,rw /
+sleep 1s
 
-        network={
-                ssid="${ssid}"
-                psk="${psk}"
-                key_mgmt=WPA-PSK
-                id_str="0"
-                priority=100
-                }
-        EOL
+sudo cat >/usr/local/etc/Nextion_Support/wpa_supplicant.conf <<EOL
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+ap_scan=1
+fast_reauth=1
+country=US
 
-        status=$?
-        if test $status -eq 0
-        then
-        echo "Supplicant file was created on second try!"
-        else
-        echo "Supplicant file was not created!"
-        fi
+network={
+        ssid="${ssid}"
+        psk="${psk}"
+        key_mgmt=WPA-PSK
+        id_str="0"
+        priority=100
+        }
+EOL
+
+status=$?
+if test $status -eq 0
+then
+echo "Supplicant file was created on second try!"
+else
+echo "Supplicant file was not created!"
+fi
 fi
