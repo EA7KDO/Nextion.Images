@@ -6,7 +6,7 @@
 #  KF6S                                     05-01-2019  #
 #########################################################
 
-sudo mount -o remount,rw /
+sudo mount -o remount,rw /boot
 sleep 1s
 sudo cp /usr/local/etc/Nextion_Support/wpa_supplicant.conf /boot/wpa_supplicant.conf
 status=$?
@@ -27,3 +27,4 @@ else
         echo "Second attempt to copy Supplicant failed!"
         fi
 fi
+sudo mount -o remount,ro /boot;
