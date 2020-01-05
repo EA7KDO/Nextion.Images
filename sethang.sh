@@ -37,7 +37,7 @@ if [ -z "$1" ]; then
         if [ "$1" = 8 ]; then sudo sed -i '/\[P25 Network\]/!b;n;n;n;n;n;n;cModeHang='"$2"'' /etc/mmdvmhost
         fi
 
-        if [ "$1" = 9 ]; then sudo sed -i '/\[NXDN\]/!b;n;n;n;n;n;cModeHang='"$2"'' /etc/mmdvmhost
+        if [ "$1" = 9 ]; then sudo sed -i '/\[NXDN\]/!b;n;n;n;n;n;n;cModeHang='"$2"'' /etc/mmdvmhost
         fi
 
         if [ "$1" = 10 ]; then sudo sed -i '/\[NXDN Network\]/!b;n;n;n;n;n;n;n;cModeHang='"$2"'' /etc/mmdvmhost
