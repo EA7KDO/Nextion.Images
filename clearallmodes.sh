@@ -1,7 +1,7 @@
 #!/bin/bash
 ############################################################
 #  Clear Modes in /etc/mmdvmhost                           #
-#  Also disable corresponding network                       #
+#  Also disable corresponding network                      #
 #  KF6S                                        09-14-2019  #
 ############################################################
 set -o errexit
