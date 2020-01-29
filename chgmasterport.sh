@@ -16,6 +16,6 @@ NewHostPort="Port="$1
 fi
 
 # Get old Host Port from /etc/mmdvmhost
-Host=$(sudo cat /etc/mmdvmhost | grep "DMR Network" -A 10 | grep "Port=")
+Host=$(sudo cat /etc/mmdvmhost | grep "\[DMR Network\]" -A 10 | grep "Port=")
 # Replace with host port that was selected on the Profile Nextion screen
 sudo sed -i 's+'"$Host"'+'"$NewHostPort"'+' /etc/mmdvmhost;
