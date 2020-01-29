@@ -16,6 +16,6 @@ NewHost="Address="$1
 fi
 
 # Get old DMR Host from /etc/mmdvmhost
-Host=$(sudo cat /etc/mmdvmhost | grep "DMR Network" -A 6 | grep "Address=")
+Host=$(sudo cat /etc/mmdvmhost | grep "\[DMR Network\]" -A 6 | grep "Address=")
 # Replace with host that was selected on the Profiles 2 Nextion screen
 sudo sed -i 's+'"$Host"'+'"$NewHost"'+' /etc/mmdvmhost;
