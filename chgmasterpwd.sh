@@ -16,6 +16,6 @@ NewHostPWD="Password="$1
 fi
 
 # Get old Host Password from /etc/mmdvmhost
-OldHostPWD=$(sudo cat /etc/mmdvmhost | grep "DMR Network" -A 10 | grep "Passwor$
+OldHostPWD=$(sudo cat /etc/mmdvmhost | grep "\[DMR Network\]" -A 10 | grep "Password")
 # Replace with host password that was selected on the Profile Nextion screen
 sudo sed -i 's+'"$OldHostPWD"'+'"$NewHostPWD"'+' /etc/mmdvmhost;
