@@ -15,6 +15,11 @@ sudo pistar-update
 sudo mount -o remount,rw /
 #Update files needed for new Nextion functions
 sudo apt-get install bc
+# Check and Remove Nextion_Temp if it exists
+sudo rm -f -r /home/pi-star/Nextion_Temp
+# Check and Remove usr/local/etc/NX4832K035.tft if it exists
+sudo rm -f /usr/local/etc/NX4832K035.tft
+sudo rm -f /usr/local/etc/NX3224K024.tft
 #set to R/O when finished
 sudo mount -o remount,ro /;
 
